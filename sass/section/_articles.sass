@@ -1,0 +1,52 @@
+.articles
+  display: flex
+  flex-direction: column
+  margin-right: 30px
+  &-early
+    margin-left: 24px
+.article
+  // height: 693px
+  width: 552px
+  padding: 24px 25px
+  background-color: #fff
+  margin-bottom: 30px
+  &-image
+    width: 502px
+    height: 321px
+    overflow: hidden
+  &-date
+    margin-top: 18px
+    color: #a6a6a6
+    font: 14px/26px 'PT Sans', sans-serif
+    text-transform: uppercase
+    position: relative
+    padding-left: 24px
+    &::before
+      content: url(../img/articles/calendar.png)
+      position: absolute
+      left: 0
+      bottom: -2px
+  &-title
+    margin-top: 13px
+    color: #262626
+    font: 600 italic 30px/24px 'Cormorant Infant', serif
+  &-text
+    margin-top: 10px
+    height: 150px
+    overflow: hidden
+    color: #737373
+    font: 16px/26px 'PT Sans', sans-serif
+  &-footer
+    display: flex
+    justify-content: space-between
+    margin-top: 25px
+  &-social
+    width: 170px
+    &__link
+      font-size: 18px
+
+@media (max-width: 1024px)
+  .articles
+    margin-right: 0
+    &-early
+      align-self: flex-end

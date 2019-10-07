@@ -1,0 +1,70 @@
+.news
+  display: flex
+  flex-wrap: wrap
+  &-preview
+    padding: 25px
+    background-color: #fff
+    width: 275px
+    height: 354px
+    margin: 0 1px 1px 0
+    &__images
+      width: 226px
+      height: 150px
+      overflow: hidden
+    &__title
+      margin-top: 13px
+      color: #262626
+      font: 600 italic 24px/26px 'Cormorant Infant', serif
+    &__text
+      margin-top: 10px
+      color: #737373
+      font: 16px/26px 'PT Sans', sans-serif
+    &__more
+      margin-top: 8px
+      padding-left: 10px
+      color: #48974c
+      font: bold 12px/24px 'PT Sans', sans-serif
+      text-transform: uppercase
+      text-decoration: none
+      display: inline-block
+      &:hover
+        color: #28bc11
+        transition: color 1s
+      &::before
+        content: url(../img/news/mr.png)
+        background: 
+        position: relative
+        right: 10px
+        top: 4px
+  &-pagination
+    margin-top: 22px
+    height: 56px
+    display: flex
+    align-items: baseline
+    &__item
+      font: 16px/56px 'PT Sans', sans-serif
+      text-decoration: none
+      color: #262626
+      text-align: center
+      margin: 0 5px
+    &__page
+      background-color: #fff
+      width: 56px
+      &_active
+        color: #ffffff
+        background-color: #449653
+    &__prev
+      margin-left: 0
+      margin-right: 16px
+    &__next
+      margin-left: 16px
+      margin-right: 0
+
+@media (max-width: 1024px)
+  .news
+    width: 100%
+    justify-content: center
+    margin-top: 25px
+    &-pagination
+      flex-basis: 70%
+      justify-content: center

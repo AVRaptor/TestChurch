@@ -1,0 +1,51 @@
+.slider
+  &-hero
+    height: 579px
+    padding-top: 80px
+    &__slide-first
+      background: url(../img/slider-bg/bgfirst.jpg) no-repeat center 
+      background-size: cover
+    &__slide-second
+      background: url(../img/slider-bg/bgsecond.jpg) no-repeat center
+      background-size: cover
+  &-message
+    color: #404040
+    width: 552px
+    height: 356px
+    background-color: #fcfcfd
+    padding: 40px
+    &__title
+      font: 700 60px/60px 'Cormorant Infant', serif
+    &__text
+      padding-top: 21px
+      font: 18px/28px 'PT Sans', sans-serif
+  &-control-block
+    position: absolute
+    bottom: 97px
+    left: 56px
+    &__dot 
+      cursor: pointer
+      height: 13px
+      width: 13px
+      margin: 0 3px
+      background-color: #cbc7c7
+      border-radius: 50%
+      display: inline-block
+      opacity: .8
+      transition: background-color 0.6s ease
+.active__dot 
+  background-color: #fff
+  opacity: 1
+
+@media (max-width: 1024px)
+  .slider
+    &-message
+      width: 50%
+      height: 100%
+      background-color: #fcfcfd
+      padding: 20px
+      &__title
+        font: 700 48px/48px 'Cormorant Infant', serif
+      &__text
+        padding-top: 21px
+        font: 16px/22px 'PT Sans', sans-serif

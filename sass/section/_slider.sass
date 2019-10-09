@@ -1,4 +1,5 @@
 .slider
+  position: relative
   &-hero
     height: 579px
     padding-top: 80px
@@ -8,6 +9,10 @@
     &__slide-second
       background: url(../img/slider-bg/bgsecond.jpg) no-repeat center
       background-size: cover
+  &-outer
+    position: absolute
+    top: 13%
+    padding-right: 18px
   &-message
     color: #404040
     width: 552px
@@ -19,10 +24,17 @@
     &__text
       padding-top: 21px
       font: 18px/28px 'PT Sans', sans-serif
+      &_hover
+        display: none
+    &:hover .slider-message__text_replacement
+      display: none
+      cursor: pointer
+    &:hover .slider-message__text_hover
+      display: block
+      cursor: pointer
   &-control-block
-    position: absolute
-    bottom: 97px
-    left: 56px
+    margin-top: 31px
+    margin-left: 41px
     &__dot 
       cursor: pointer
       height: 13px
@@ -42,10 +54,48 @@
     &-message
       width: 50%
       height: 100%
-      background-color: #fcfcfd
-      padding: 20px
+      padding: 25px 30px
       &__title
-        font: 700 48px/48px 'Cormorant Infant', serif
+        font-size: 38px
+        line-height: 48px
       &__text
-        padding-top: 21px
-        font: 16px/22px 'PT Sans', sans-serif
+        padding-top: 11px
+        font-size: 16px
+        line-height: 28px
+
+@media (max-width: 700px)
+  .slider
+    &-message
+      width: 50%
+      padding: 10px 20px
+      &__title
+        font-size: 32px
+        line-height: 42px
+      &__text
+        padding-top: 11px
+        font-size: 14px
+        line-height: 24px
+
+@media (max-width: 500px)
+  .slider
+    &-control-block
+      display: none
+
+@media (max-width: 400px)
+  .slider
+    &-hero
+      padding-top: 10px
+    &-outer
+      top: 6%
+    &-message
+      width: 100%
+      height: 100%
+      padding: 8px 15px
+      text-align: center
+      &__title
+        font-size: 27px
+        line-height: 30px
+      &__text
+        padding-top: 11px
+        line-height: 22px
+

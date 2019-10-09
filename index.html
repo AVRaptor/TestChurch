@@ -6,13 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Храм Саввы Сторожевского</title>
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Cormorant+Infant:300i,600i,700|PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
 </head>
 <body>
   <header class="header">
     <div class="container">
-      <div class="header-top">
+      <div class="head-wrap">
+        <div class="header-top">
         <div class="header-top__title logo">
           Храм святого преподобного Саввы Сторожевского
         </div>
@@ -20,56 +22,46 @@
           Местная религиозная организация Московской епархии Русской Православной Церкви (Московский Патриархат)
         </div>
       </div>
-      <nav class="header-menu menu">
-        <a href="#" class="header-menu__item menu__item menu__item_active">главная</a>
-        <a href="#" class="header-menu__item menu__item">прп. Савва сторожевский</a>
-        <a href="#" class="header-menu__item menu__item">жизнь прихода</a>
-        <a href="#" class="header-menu__item menu__item">фотоальбом</a>
-        <a href="#" class="header-menu__item menu__item">контакты</a>
-        <a href="#" class="header-menu__item menu__item">пожертвования</a>
-      </nav>
-    </div>
-    <!-- /.container -->
-    <div class="slider">
-      <div class="slider-hero slider-hero__slide-first">
-        <div class="container">
-          <div class="slider-message">
-            <div class="slider-message__title">Дорогие братья и сестры</div>
-            <div class="slider-message__text">Приглашаем Вас каждое воскресенье в 13.00 на молебен о
-                строительстве Храма преподобного Саввы Сторожевского.
-                Молебен служится на месте строительства по адресу: пл.
-                Викторио Кодовильи, вл. 1 напротив бывшего кинотеатра “Енисей”
-            </div>
-          </div>
-        </div> <!-- /.container -->
+      <div class="mobile-wrap">
+        <div class="nav-wrap">
+            <nav id="navLinks" class="header-menu">
+              <a href="#" class="header-menu__item menu__item menu__item_active">главная</a>
+              <a href="#" class="header-menu__item menu__item">прп. Савва сторожевский</a>
+              <a href="#" class="header-menu__item menu__item">жизнь прихода</a>
+              <a href="#" class="header-menu__item menu__item">фотоальбом</a>
+              <a href="#" class="header-menu__item menu__item">контакты</a>
+              <a href="#" class="header-menu__item menu__item">пожертвования</a>
+            </nav>
+              <a href="#" class="icon header-menu__item menu__item" onclick="barFunction()">
+                <i class="fa fa-bars"></i>
+              </a>
+        </div>
       </div>
-      <div class="slider-hero slider-hero__slide-second">
-        <div class="container">
+      </div>
+    </div>
+
+    <div class="slider">
+      <div class="slider-hero slider-hero__slide-first"></div>
+      <div class="slider-hero slider-hero__slide-second"></div>
+      <div class="slider-hero slider-hero__slide-first"></div>
+      <div class="container">
+        <div class="slider-outer">
           <div class="slider-message">
             <div class="slider-message__title">Дорогие братья и сестры</div>
-            <div class="slider-message__text">Приглашаем детей в возрасте от 5 лет для занятий в воскресной
+            <div class="slider-message__text slider-message__text_replacement">Приглашаем Вас каждый вторник в 09.00 помочь в
+                строительстве Храма преподобного Саввы Сторожевского. Помощь требуется по адресу: пл. Викторио Кодовильи, вл. 1 напротив бывшего кинотеатра “Енисей”
+            </div>
+            <div class="slider-message__text slider-message__text_hover">Приглашаем детей в возрасте от 5 лет для занятий в воскресной
               группе при храме преподобного Саввы Сторожевского.
               Занятия начнутся с октября 2016 года.
               Запись в группу осуществляется по воскресеньям с 13-14 часов.
             </div>
           </div>
-        </div> <!-- /.container -->
-      </div>
-      <div class="slider-hero slider-hero__slide-first">
-        <div class="container">
-          <div class="slider-message">
-            <div class="slider-message__title">Дорогие братья и сестры</div>
-            <div class="slider-message__text">Приглашаем Вас каждый вторник в 09.00 помочь в
-                строительстве Храма преподобного Саввы Сторожевского. Помощь требуется по адресу: пл. Викторио Кодовильи, вл. 1 напротив бывшего кинотеатра “Енисей”
-            </div>
+          <div class="slider-control-block">
+            <span class="slider-control-block__dot" onclick="currentSlide(1)"></span> 
+            <span class="slider-control-block__dot" onclick="currentSlide(2)"></span> 
+            <span class="slider-control-block__dot" onclick="currentSlide(3)"></span> 
           </div>
-        </div> <!-- /.container -->
-      </div>
-      <div class="container">
-        <div class="slider-control-block">
-          <span class="slider-control-block__dot" onclick="currentSlide(1)"></span> 
-          <span class="slider-control-block__dot" onclick="currentSlide(2)"></span> 
-          <span class="slider-control-block__dot" onclick="currentSlide(3)"></span> 
         </div>
       </div>
     </div>
@@ -82,7 +74,7 @@
         <section class="articles">
           <article class="article">
             <div class="article-image">
-              <img src="img/articles/article1.jpg" alt="">
+              <img src="img/articles/article1.jpg" class="article-image-adaptive" alt="">
             </div>
             <div class="article-date">7 фев 2017</div>
             <div class="article-title">Освящение закладного камня</div>
@@ -100,7 +92,7 @@
           </article>
           <article class="article">
               <div class="article-image">
-                <img src="img/articles/article2.jpg" alt="">
+                <img src="img/articles/article2.jpg" class="article-image-adaptive" alt="">
               </div>
               <div class="article-date">11 фев 2017</div>
               <div class="article-title">Визит Ресина В.И.</div>
@@ -256,6 +248,9 @@
   <!-- /.footer -->
   <script src="https://kit.fontawesome.com/31fd8e80cd.js" crossorigin="anonymous"></script>
   <script src="js/slider.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/menu.js"></script>
 </body>
 </html>
 

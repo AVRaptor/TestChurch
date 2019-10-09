@@ -50,6 +50,9 @@
     &__page
       background-color: #fff
       width: 56px
+      border: 1px solid transparent
+      &:hover
+        border: 1px solid #449653
       &_active
         color: #ffffff
         background-color: #449653
@@ -68,3 +71,55 @@
     &-pagination
       flex-basis: 70%
       justify-content: center
+
+@media (min-width: 1025px) and (max-width: 1190px)
+  .news
+    justify-content: flex-end
+    &-pagination
+      margin-right: 69px
+
+@media (max-width: 450px)
+  .news
+    &-pagination
+      margin-top: 20px
+      height: 56px
+      &__item
+        line-height: 46px
+        margin: 0 4px
+      &__page
+        width: 46px
+      &__prev
+        margin-right: 20px
+      &__next
+        margin-left: 20px
+
+@media (max-width: 370px)
+  .news
+    &-pagination
+      margin-top: 20px
+      height: 36px
+      &__item
+        line-height: 36px
+        margin: 0 7px
+      &__page
+        width: 36px
+      &__prev
+        margin-right: 20px
+      &__next
+        margin-left: 20px
+
+
+@media (max-width: 350px)
+  .news
+    &-pagination
+      height: 28px
+      &__item
+        font-size: 12px
+        line-height: 28px
+        margin: 0 6px
+      &__page
+        width: 28px
+      &__prev
+        margin-right: 15px
+      &__next
+        margin-left: 15px

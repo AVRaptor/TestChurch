@@ -6,14 +6,49 @@
     &__subtitle
       margin-top: 12px
   &-menu
+    display: flex
+    font: 16px/24px 'PT Sans', sans-serif
     margin-top: 35px
     border-top: 1px solid #e6e6e6
     padding: 25px 0 20px 0
     justify-content: space-between
 
-@media (max-width: 820px)
+
+
+  
+@media (max-width: 860px)
   .header
     padding-top: 10px
     &-menu
       margin-top: 20px
       padding: 15px 0
+@media (max-width: 820px)
+  .header
+    &-menu
+      font-size: 14px
+@media (max-width: 700px)
+  .header
+    &-menu
+      margin-top: 0
+      flex-direction: column
+      text-align: center
+      border-top: 0
+      padding: 0
+      &__item
+        border: 1px solid #e6e6e6
+        border-left: 0
+        border-right: 0
+        width: 100%
+        margin-top: -1px
+        padding: 5px
+        background-color: #efefef
+    &-top
+      &__title
+        font-size: 26px
+      &__subtitle
+        font-size: 14px
+        margin-top: 0px
+@media (min-width: 701px)
+  .header
+    &-menu
+      display: flex!important  

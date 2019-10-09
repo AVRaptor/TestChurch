@@ -2,18 +2,23 @@
   display: flex
   flex-direction: column
   margin-right: 30px
+  flex-shrink: 0
   &-early
     margin-left: 24px
 .article
   // height: 693px
-  width: 552px
+  max-width: 552px
   padding: 24px 25px
   background-color: #fff
   margin-bottom: 30px
   &-image
-    width: 502px
-    height: 321px
+    max-width: 502px
+    max-height: 321px
     overflow: hidden
+    &-adaptive
+      display: block
+      max-width: 100%
+      height: auto
   &-date
     margin-top: 18px
     color: #a6a6a6
@@ -45,8 +50,58 @@
     &__link
       font-size: 18px
 
-@media (max-width: 1024px)
+@media (min-width: 881px) and (max-width: 1024px)
+  .articles
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-between
+    &-early
+      flex-basis: 100%
+      margin-left: 0
+  .article
+    flex-basis: 48%
+
+@media (min-width: 1025px) and (max-width: 1190px)
+  .articles
+    flex-basis: 48%
+    justify-content: space-between
+    margin-right: 4px
+
+@media (min-width: 1025px) and (max-width: 1127px)
+  .articles
+    flex-basis: 47%
+
+@media (min-width: 1025px) and (max-width: 1110px)
+  .articles
+    flex-basis: 46%
+
+@media (min-width: 1025px) and (max-width: 1088px)
+  .articles
+    flex-basis: 44%
+
+@media (min-width: 1025px) and (max-width: 1051px)
+  .articles
+    flex-basis: 41%
+
+@media (max-width: 881px)
   .articles
     margin-right: 0
+    
+@media (max-width: 500px)
+  .articles
     &-early
-      align-self: flex-end
+      width: 100%
+      margin-left: 0
+  .article
+    &-more
+      width: 140px
+      font-size: 14px
+    &-social
+      width: 150px
+      justify-content: space-around
+      &__link
+        font-size: 16px
+@media (max-width: 350px)
+  .article
+    padding: 9px
+    
